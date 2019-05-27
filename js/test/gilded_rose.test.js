@@ -1,6 +1,4 @@
-'use strict';
-
-const {Item, update_quality} = require('../src/gilded_rose');
+import {Item, update_quality} from '../src/gilded_rose';
 
 
 

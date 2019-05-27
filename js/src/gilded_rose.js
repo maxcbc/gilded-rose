@@ -1,12 +1,12 @@
-exports.Item = function Item(name, sell_in, quality) {
+export function Item(name, sell_in, quality) {
   this.name = name;
   this.sell_in = sell_in;
   this.quality = quality;
 };
 
-var items = [];
+export const items = [];
 
-exports.update_quality = function update_quality() {
+export function update_quality() {
   for (var i = 0; i < items.length; i++) {
     if (items[i].name != 'Aged Brie' && items[i].name != 'Backstage passes to a TAFKAL80ETC concert') {
       if (items[i].quality > 0) {
