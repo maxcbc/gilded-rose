@@ -1,7 +1,13 @@
+'use strict';
+
+const {Item, update_quality} = require('../src/gilded_rose');
+
+
+
 describe("Gilded Rose", function() {
 
   it("should foo", function() {
-    items = [ new Item("foo", 0, 0) ];
+    const items = [ new Item("foo", 0, 0) ];
     update_quality();
     expect(items[0].name).toEqual("foo");
   });

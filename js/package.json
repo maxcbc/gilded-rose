@@ -1,0 +1,13 @@
+{
+  "name": "gilded-rose-js",
+  "version": "1.0.0",
+  "main": "src/gilded_rose.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "private": true,
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
