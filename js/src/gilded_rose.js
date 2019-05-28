@@ -10,7 +10,6 @@ export function update_quality() {
   for (const item of items) {
 
     switch(item.name) {
-      case 'Aged Brie':
       case 'Backstage passes to a TAFKAL80ETC concert':
       case 'Sulfuras, Hand of Ragnaros':
         if (item.name != 'Aged Brie' && item.name != 'Backstage passes to a TAFKAL80ETC concert') {
@@ -56,6 +55,14 @@ export function update_quality() {
             }
           }
         }
+        break;
+      case 'Aged Brie':
+        if (item.sell_in > 0) {
+          item.quality = item.quality + 1
+        } else {
+          item.quality = item.quality + 2
+        }
+        item.sell_in--;
         break;
       default:
         if (item.sell_in > 0) {
