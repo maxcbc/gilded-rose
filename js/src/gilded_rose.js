@@ -31,6 +31,13 @@ export function update_quality() {
                     item.quality = item.quality + 2;
                 }
                 break;
+            case 'Conjured':
+                if (item.sell_in > 0) {
+                    item.quality = Math.max(0, item.quality - 2);
+                } else {
+                    item.quality = Math.max(0, item.quality - 4);
+                }
+                break;
             default:
                 if (item.sell_in > 0) {
                     item.quality = Math.max(0, item.quality - 1);
