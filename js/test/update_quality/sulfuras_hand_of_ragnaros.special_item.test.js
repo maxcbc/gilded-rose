@@ -7,15 +7,15 @@ describe('update_quality | special item | sulfuras, hand of ragnaros', () => {
         items.length = 0
     });
 
-    test('it should not alter the quality of an item of \'Sulfuras, Hand of Ragnaros\' when it has not passed its sell_in date', () => {
-        const item = new Item('Sulfuras, Hand of Ragnaros', 3, 80);
+    test('it should set an item of \`Sulfuras, Hand of Ragnaros\`\'s quality to 80 when it has not passed its sell_in date', () => {
+        const item = new Item('Sulfuras, Hand of Ragnaros', 3, 8);
         items.push(item);
         update_quality();
         expect(item.quality).toEqual(80)
     });
 
-    test('it should not alter the quality of an item of \'Sulfuras, Hand of Ragnaros\' even if it has passed its sell_in date', () => {
-        const item = new Item('Sulfuras, Hand of Ragnaros', 0, 80);
+    test('it should set an item of \`Sulfuras, Hand of Ragnaros\`\'s quality to 80 even if it has passed its sell_in date', () => {
+        const item = new Item('Sulfuras, Hand of Ragnaros', 0, 70);
         items.push(item);
         update_quality();
         expect(item.quality).toEqual(80)
