@@ -28,4 +28,10 @@ describe('update_quality | normal item', () => {
         expect(item.sell_in).toEqual(0)
     });
 
+    test('it should not reduce an item\'s quality below 0', () => {
+        const item = new Item('foo', 0, 0);
+        items.push(item);
+        update_quality();
+        expect(item.quality).toEqual(0)
+    });
 });
